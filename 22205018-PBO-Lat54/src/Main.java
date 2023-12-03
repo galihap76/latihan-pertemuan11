@@ -63,10 +63,10 @@ class WarnaKoordinat extends Koordinat {
     }
 }
 
-// Buat kelas Main
+// Buat kelas Main sebagai kelas utama
 public class Main {
 
-    // Buat method utama untuk menjalankan program
+    // Buat method main sebagai method utama untuk menjalankan program
     public static void main(String[] args) {
         
         // Instansiasi objek WarnaKoordinat
