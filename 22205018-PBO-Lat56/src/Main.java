@@ -7,46 +7,61 @@
  * Deskripsi Program : Program tentang umur barang antik pada java.
 */
 
+// Membuat kelas BarangAntik
 class BarangAntik {
+	
+	// Buat property umur
     int umur;
     
+    // Konstruktor untuk menginisialisasi objek BarangAntik dengan nilai umur
     public BarangAntik(int umur){
-      this.umur = umur;  
+    	
+    	// Tampung sebagai nilai sementara menggunakan this yang merujuk pada property this
+        this.umur = umur;  
     }
     
+    // Method untuk menampilkan umur BarangAntik
     public void tampilUmur(){
-        System.out.println("Umur Barang Antik ini adalah : " +umur+ " tahun ");
-        
+        System.out.println("Umur Barang Antik ini adalah : " + umur + " tahun");
     }
-    
 }
 
+// Membuat kelas Radio yang merupakan turunan dari BarangAntik
 class Radio extends BarangAntik {
+	
+	// Buat property nama
     private String name;
 
+    // Konstruktor untuk menginisialisasi objek Radio dengan nilai umur
     public Radio(int umur){
         super(umur);
-        this.umur = umur;
-        
     }
+
+    // Getter untuk name
     public String getName() {
         return name;
     }
 
+    // Setter untuk name
     public void setName(String name) {
         this.name = name;
     }    
 }
 
+// Buat kelas Main sebagai kelas utama
 public class Main {
 
-	public static void main(String[] args) {
-		
-		 Radio rdo = new Radio(234);
-	     rdo.setName("Radio AM");
-	     System.out.println("Nama Barang Antik : " + rdo.getName());
-	     rdo.tampilUmur();
-
-	}
-
+	// Jalankan method main sebagai method utama untuk menjalankan program
+    public static void main(String[] args) {
+        
+        // Membuat objek Radio
+        Radio rdo = new Radio(234);
+        
+        // Set nama radio
+        rdo.setName("Radio AM");
+        
+        // Dan tampilkan nama barang antik dan method tampilUmur()
+        System.out.println("Nama Barang Antik : " + rdo.getName());
+        rdo.tampilUmur();
+    }
 }
