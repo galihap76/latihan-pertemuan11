@@ -7,119 +7,122 @@
  * Deskripsi Program : Program java sederhana tentang handphone.
 */
 
+// Mendefinisikan kelas HandPhone
 class HandPhone {
 
+    // Variabel protected untuk atribut HandPhone
     protected String manufacture;
     protected String operatingSystem;
     protected String model;
     protected int harga;
 
+    // Konstruktor untuk menginisialisasi objek HandPhone dengan nilai manufacture, operatingSystem, model, dan harga
     public HandPhone(String man, String os, String model, int harga) {
-        
         this.manufacture = man;
         this.operatingSystem = os;
         this.model = model;
         this.harga = harga;
     }
-    
+
+    // Metode untuk menampilkan informasi produk HandPhone
     public void displayProduct(){
         System.out.println("Manufaktur : " +manufacture);
         System.out.println("OS\t: " +operatingSystem);
         System.out.println("Model\t: " +model);
         System.out.println("Harga\t: " +harga);
-        
-       
     }
-
 }
 
+// Mendefinisikan kelas Android yang merupakan turunan dari HandPhone
 class Android extends HandPhone{
+	
+	// Variabel untuk membuat keyStore
     private String keyStore;
     
+    // Konstruktor untuk menginisialisasi objek Android dengan nilai manufacture, operatingSystem, model, dan harga
     public Android(String man, String os, String model, int harga) {
         super(man, os, model, harga);
-        this.manufacture = man;
-        this.operatingSystem = os;
-        this.model = model;
-        this.harga = harga;
-
     }
 
+    // Getter untuk keyStore
     public String getKeyStore() {
         return keyStore;
     }
 
+    // Setter untuk keyStore
     public void setKeyStore(String keyStore) {
         this.keyStore = keyStore;
     }  
 }
 
+// Mendefinisikan kelas BlackBerry yang merupakan turunan dari HandPhone
 class BlackBerry extends HandPhone {
 
+    // Variabel untuk membuat PIN BlackBerry
     private String pinBB;
 
+    // Konstruktor untuk menginisialisasi objek BlackBerry dengan nilai manufacture, operatingSystem, model, dan harga
     public BlackBerry(String man, String os, String model, int harga) {
         super(man, os, model, harga);
-        this.manufacture = man;
-        this.operatingSystem = os;
-        this.model = model;
-        this.harga = harga;
-
     }
 
+    // Getter untuk pinBB
     public String getPinBB() {
         return pinBB;
     }
 
+    // Setter untuk pinBB
     public void setPinBB(String pinBB) {
         this.pinBB = pinBB;
     }
-
 }
 
+// Mendefinisikan kelas WindowsPhone yang merupakan turunan dari HandPhone
 class WindowsPhone extends HandPhone {
 
+    // Variabel untuk membuat Windows Phone KeyStore
     private String wpKeyStore;
 
+    // Konstruktor untuk menginisialisasi objek WindowsPhone dengan nilai manufacture, operatingSystem, model, dan harga
     public WindowsPhone(String man, String os, String model, int harga) {
         super(man, os, model, harga);
-        this.manufacture = man;
-        this.operatingSystem = os;
-        this.model = model;
-        this.harga = harga;
     }
 
+    // Getter untuk wpKeyStore
     public String getWpKeyStore() {
         return wpKeyStore;
     }
 
+    // Setter untuk wpKeyStore
     public void setWpKeyStore(String wpKeyStore) {
         this.wpKeyStore = wpKeyStore;
     }
-
 }
 
+// Kelas utama untuk menjalankan program
 public class Main {
 
-	public static void main(String[] args) {
-		
-		    Android andro = new Android("Samsung","Android","Grand",3000000);
-	        andro.setKeyStore("234ibfd3840fo");
-	        andro.displayProduct();
-	        System.out.println("Android KeyStore : "+andro.getKeyStore());
-	        System.out.println("");
-	        
-	        BlackBerry bb = new BlackBerry("BlackB","RIM","Curve",2000000);
-	        bb.setPinBB("BHS249");
-	        bb.displayProduct();
-	        System.out.println("PIN : "+bb.getPinBB());
-	        System.out.println("");
-	        
-	        WindowsPhone wp = new WindowsPhone("Nokia","Win8","Lumia",3500000);
-	        wp.setWpKeyStore("UUUQIJWORJ");
-	        wp.displayProduct();
-	        System.out.println("Wp Key Store : "+wp.getWpKeyStore()); 
+    public static void main(String[] args) {
+        
+        // Membuat objek Android
+        Android andro = new Android("Samsung","Android","Grand",3000000);
+        andro.setKeyStore("234ibfd3840fo");
+        andro.displayProduct();
+        System.out.println("Android KeyStore : "+andro.getKeyStore());
+        System.out.println("");
+        
+        // Membuat objek BlackBerry
+        BlackBerry bb = new BlackBerry("BlackB","RIM","Curve",2000000);
+        bb.setPinBB("BHS249");
+        bb.displayProduct();
+        System.out.println("PIN : "+bb.getPinBB());
+        System.out.println("");
+        
+        // Membuat objek WindowsPhone
+        WindowsPhone wp = new WindowsPhone("Nokia","Win8","Lumia",3500000);
+        wp.setWpKeyStore("UUUQIJWORJ");
+        wp.displayProduct();
+        System.out.println("Wp Key Store : "+wp.getWpKeyStore()); 
 
-	}
-
+    }
 }
