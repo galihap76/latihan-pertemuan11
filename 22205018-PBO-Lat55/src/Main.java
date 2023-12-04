@@ -18,6 +18,8 @@ class HandPhone {
 
     // Konstruktor untuk menginisialisasi objek HandPhone dengan nilai manufacture, operatingSystem, model, dan harga
     public HandPhone(String man, String os, String model, int harga) {
+    	
+    	// Tampung sebagai nilai sementara menggunakan this yang merujuk pada variabel kelas HandPhone
         this.manufacture = man;
         this.operatingSystem = os;
         this.model = model;
@@ -102,26 +104,49 @@ class WindowsPhone extends HandPhone {
 // Kelas utama untuk menjalankan program
 public class Main {
 
+	// Buat method main sebagai method utama
     public static void main(String[] args) {
         
         // Membuat objek Android
         Android andro = new Android("Samsung","Android","Grand",3000000);
+        
+        // Set key store
         andro.setKeyStore("234ibfd3840fo");
+        
+        // Panggil method displayProduct();
         andro.displayProduct();
+        
+        // Tampilkan keystore android key store dengan method getKeyStore();
         System.out.println("Android KeyStore : "+andro.getKeyStore());
+        
+        // Beri spasi
         System.out.println("");
         
         // Membuat objek BlackBerry
         BlackBerry bb = new BlackBerry("BlackB","RIM","Curve",2000000);
+        
+        // Set key store
         bb.setPinBB("BHS249");
+        
+        // Panggil method displayProduct();
         bb.displayProduct();
+        
+        // Tampilkan PIN BlackBerry dengan method getPinBB();
         System.out.println("PIN : "+bb.getPinBB());
+        
+        // Beri spasi
         System.out.println("");
         
         // Membuat objek WindowsPhone
         WindowsPhone wp = new WindowsPhone("Nokia","Win8","Lumia",3500000);
+        
+        // Set key store
         wp.setWpKeyStore("UUUQIJWORJ");
+        
+        // Panggil method displayProduct();
         wp.displayProduct();
+        
+        // Tampilkan windows phone key store dengan method getWpKeyStore();
         System.out.println("Wp Key Store : "+wp.getWpKeyStore()); 
 
     }
