@@ -11,7 +11,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Mendefinisikan kelas Akatsuki
+// Membuat kelas Akatsuki
 class Akatsuki {
 	
 	// Membuat property pakaian
