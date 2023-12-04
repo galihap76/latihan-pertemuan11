@@ -10,7 +10,7 @@
 // Mendefinisikan kelas HandPhone
 class HandPhone {
 
-    // Variabel protected untuk atribut HandPhone
+    // Variabel protected untuk kelas HandPhone
     protected String manufacture;
     protected String operatingSystem;
     protected String model;
