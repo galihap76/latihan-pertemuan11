@@ -43,7 +43,7 @@ class Koordinat {
 // Mendefinisikan kelas WarnaKoordinat yang merupakan turunan dari Koordinat
 class WarnaKoordinat extends Koordinat {
 	
-    // Set property string ke public
+    // Set property namaWarna ke public
     public String namaWarna;
 
     // Konstruktor untuk inisialisasi objek WarnaKoordinat dengan nilai x, y, dan namaWarna
