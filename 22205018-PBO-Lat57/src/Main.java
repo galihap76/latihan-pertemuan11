@@ -84,7 +84,7 @@ class Skateboard extends Vehicle {
     }
 }
 
-// Kelas main sebagai kelas utama
+// Kelas Main sebagai kelas utama
 public class Main {
 
 	// Method main sebagai method utama untuk menjalankan program
