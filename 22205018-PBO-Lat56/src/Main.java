@@ -16,7 +16,7 @@ class BarangAntik {
     // Konstruktor untuk menginisialisasi objek BarangAntik dengan nilai umur
     public BarangAntik(int umur){
     	
-    	// Tampung sebagai nilai sementara menggunakan this yang merujuk pada property this
+    	// Tampung sebagai nilai sementara menggunakan this yang merujuk pada property umur
         this.umur = umur;  
     }
     
